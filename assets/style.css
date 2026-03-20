@@ -61,53 +61,28 @@
     }
 
 /* RESPONSIVE NAVBAR */
-@media (max-width: 768px){
+@media (max-width:768px){
 
   .navbar{
-    padding: 1rem 1.5rem;
-  }
-
-  .navbar .logo img{
-    height: 45px; /* smaller logo */
-  }
-
-  .navbar .logo{
-    font-size: 1.2rem;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .nav-links{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;        /* ✅ THIS FIXES OVERFLOW */
     justify-content: center;
-    gap: 10px;
+    width: 100%;
     margin-top: 10px;
   }
 
   .nav-links a{
-    margin: 0;
-    padding: 6px 10px;
+    margin: 5px;
     font-size: 0.9rem;
+    white-space: nowrap;    /* keeps text clean */
   }
 
 }
-/* SMALL MOBILE */
-@media (max-width: 480px){
-
-  .navbar{
-    padding: 0.8rem 1rem;
-  }
-
-  .nav-links{
-    gap: 6px;
-  }
-
-  .nav-links a{
-    font-size: 0.8rem;
-    padding: 5px 8px;
-  }
-
-}
-
     /* Hero Section */
     .video-section {
       position: relative;
