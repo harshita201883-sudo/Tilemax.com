@@ -33,7 +33,8 @@
     }
 
     .nav-links a {
-      margin-left: 2rem;
+      display: flex;
+      gap: 2rem; 
       text-decoration: none;
       color: #fff;
       font-weight: 500;
@@ -70,20 +71,19 @@
 
   .nav-links{
     display: flex;
-    flex-wrap: wrap;        /* ✅ THIS FIXES OVERFLOW */
+    flex-wrap: wrap;   /* VERY IMPORTANT */
     justify-content: center;
+    gap: 10px;
     width: 100%;
-    margin-top: 10px;
   }
 
   .nav-links a{
-    margin: 5px;
+    margin: 0;
     font-size: 0.9rem;
-    white-space: nowrap;    /* keeps text clean */
   }
 
 }
-    /* Hero Section */
+/* Hero Section */
     .video-section {
       position: relative;
       height: 100vh;
