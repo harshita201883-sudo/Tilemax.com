@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Floor Tiles</title>
+
+<link rel="stylesheet" href="css/floor.css">
+
+</head>
+
+<body>
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+<img src="image/tile_logo.png">
+<span>TileMax</span>
+</a>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="tiles-cat.html">Tiles</a>
+<a href="sanitary.html">Sanitary Ware</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+<section class="gallery">
+
+<h1 class="title">Parking Tiles</h1>
+
+<div class="tiles-grid">
+
+<div class="tile-card">
+<img src="image/parking/1.jpeg">
+</div>
+
+<div class="tile-card">
+<img src="image/parking/2.jpeg">
+</div>
+
+<div class="tile-card">
+<img src="image/parking/3.jpeg">
+</div>
+
+<div class="tile-card">
+<img src="image/parking/4.jpeg">
+</div>
+
+<div class="tile-card">
+<img src="image/parking/9.jpeg">
+</div>
+
+<div class="tile-card">
+<img src="image/parking/6.jpeg">
+</div>
+
+<div class="tile-card">
+<img src="image/parking/7.jpeg">
+</div>
+
+<div class="tile-card">
+<img src="image/parking/8.jpeg">
+</div>
+
+<div class="tile-card">
+<img src="image/parking/10.jpeg">
+</div>
+
+<div class="tile-card">
+<img src="image/parking/11.jpeg">
+</div>
+
+
+
+<div class="tile-card">
+<img src="image/parking/13.jpeg">
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- Image Viewer -->
+
+<div class="lightbox">
+
+<span class="close">&times;</span>
+
+<img class="lightbox-img">
+
+<button class="prev">&#10094;</button>
+<button class="next">&#10095;</button>
+
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left Section -->
+    <div class="footer-left">
+      <div class="footer-brand">
+        <img src="image/tile_logo.png" alt="Elite Tiles Logo" class="footer-logo">
+        <h3>TileMax Ceramics Pvt.Ltd</h3>
+      </div>
+      <p>Discover the art of elegance — explore our premium range of indoor, outdoor, and commercial tiles crafted for
+        perfection, durability, and timeless appeal.</p>
+    </div>
+
+    <!-- Center Section -->
+    <div class="footer-center">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="eproject2.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="lion.html">Cards</a></li>
+          <li><a href="markhor.html">Products</a></li>
+          <li><a href="indian alligator.html">Tiles Info</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-right">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="shop-timing">
+        <h4>Shop Timings</h4>
+        <p>Mon – sat: 9:00 AM – 8:00 PM</p>
+        <p>Sun: 10:00 AM – 3:00 PM</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 TileMax Ceramics Pvt.Ltd | Designed with Elegance & Passion</p>
+  </div>
+</footer>
+
+
+<script>
+
+const images = document.querySelectorAll(".tile-card img");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+
+const closeBtn = document.querySelector(".close");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let current = 0;
+
+
+/* OPEN IMAGE */
+
+images.forEach((img,index)=>{
+
+img.addEventListener("click",()=>{
+
+lightbox.style.display="flex";
+lightboxImg.src=img.src;
+current=index;
+
+});
+
+});
+
+
+/* CLOSE */
+
+closeBtn.onclick=()=>{
+lightbox.style.display="none";
+};
+
+
+/* NEXT */
+
+nextBtn.onclick=()=>{
+
+current++;
+
+if(current >= images.length){
+current = 0;
+}
+
+lightboxImg.src = images[current].src;
+
+};
+
+
+/* PREVIOUS */
+
+prevBtn.onclick=()=>{
+
+current--;
+
+if(current < 0){
+current = images.length - 1;
+}
+
+lightboxImg.src = images[current].src;
+
+};
+
+</script>
+
+</body>
+</html>
