@@ -90,6 +90,23 @@
   }
 
 }
+/* SMALL MOBILE */
+@media (max-width: 480px){
+
+  .navbar{
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links{
+    gap: 6px;
+  }
+
+  .nav-links a{
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+
+}
 
     /* Hero Section */
     .video-section {
