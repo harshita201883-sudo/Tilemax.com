@@ -13,101 +13,49 @@ color:#122C4F;
 
 /* NAVBAR */
 
-.navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 4rem;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(6px);
-      z-index: 1000;
-    }
-
-    .navbar .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      font-size: 1.5rem;
-      color: #fff;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .navbar .logo img {
-      height: 60px;
-      transition: transform 0.3s ease;
-    }
-
-    .navbar .logo:hover img {
-      transform: scale(1.05);
-    }
-
-    .nav-links a {
-      margin-left: 2rem;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0%;
-      height: 2px;
-      background-color: #007bff;
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #007bff;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-@media (max-width:768px){
-
-  .navbar{
-    flex-direction: column;
-    padding: 0.8rem 1rem;
-  }
-
-  .navbar .logo{
-    margin-bottom: 10px;
-  }
-
-  .nav-links{
-    display: flex;
-    overflow-x: auto;        /* ✅ scroll instead of breaking */
-    white-space: nowrap;
-    gap: 15px;
-    width: 100%;
-    padding-bottom: 5px;
-  }
-
-  .nav-links::-webkit-scrollbar{
-    display: none; /* hide scrollbar */
-  }
-
-  .nav-links a{
-    flex: 0 0 auto;         /* prevent shrinking */
-    margin: 0;
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    background: rgba(255,255,255,0.08);
-    border-radius: 20px;
-  }
-
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1rem 4rem;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(6px);
+z-index:1000;
 }
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.logo img{
+height:40px;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#FBF9E4;
+}
+
+
 /* HERO */
 
 .tiles-hero{
@@ -385,4 +333,43 @@ transform:translateY(0);
 text-decoration:none;
 color:inherit;
 display:block;
+}
+/* =========================
+   📱 SCROLL NAVBAR (MOBILE)
+========================= */
+@media (max-width:768px){
+
+  .navbar{
+    padding: 0.8rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo{
+    margin-bottom: 10px;
+  }
+
+  .nav-links{
+    display: flex;
+    overflow-x: auto;      /* ✅ enables scroll */
+    white-space: nowrap;
+    gap: 12px;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  /* HIDE SCROLLBAR */
+  .nav-links::-webkit-scrollbar{
+    display: none;
+  }
+
+  .nav-links a{
+    flex: 0 0 auto;       /* ❗ VERY IMPORTANT */
+    margin: 0;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+  }
+
 }
