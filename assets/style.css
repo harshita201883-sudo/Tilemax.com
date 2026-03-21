@@ -1187,3 +1187,38 @@ transform: translateY(8px);
 }
 
 }
+/* =========================
+   📱 FIX CARDS FOR MOBILE
+========================= */
+@media (max-width:768px){
+
+  .about-company{
+    padding: 50px 20px; /* reduce side spacing */
+  }
+
+  .company-header{
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .company-header h1{
+    font-size: 26px;
+  }
+
+  .company-header p{
+    max-width: 100%;
+  }
+
+  /* MAIN FIX */
+  .company-cards{
+    flex-direction: column;   /* ✅ STACK CARDS */
+    gap: 20px;
+  }
+
+  .company-card{
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+}
