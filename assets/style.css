@@ -62,27 +62,6 @@
     }
 
 /* RESPONSIVE NAVBAR */
-@media (max-width:768px){
-
-  .navbar{
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .nav-links{
-    display: flex;
-    flex-wrap: wrap;   /* VERY IMPORTANT */
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .nav-links a{
-    margin: 0;
-    font-size: 0.9rem;
-  }
-
-}
 /* Hero Section */
     .video-section {
       position: relative;
@@ -213,15 +192,7 @@
     width:100%;
     border-radius:10px;
 }
-    @media (max-width: 768px) {
-      .emporium-section h1 {
-        font-size: 2rem;
-      }
-      .emporium-video {
-        width: 95%;
-      }
-    }
-
+   
     /* TILE COLLECTION SECTION STYLE */
     .tile-showcase {
     background: #f9f9f9;
@@ -348,20 +319,7 @@
     background: #2563eb;
   }
 
-  @media (max-width: 768px) {
-    .tile-showcase {
-      padding: 50px 20px;
-    }
-
-    .section-heading h2 {
-      font-size: 2rem;
-    }
-
-    .tile-item img {
-      height: 200px;
-    }
-  }
-
+  
   /*  Section Styling */
   .product-section {
     padding: 60px 30px;
@@ -453,11 +411,7 @@
     animation: fadeIn 0.4s ease;
   }
 
-  @keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.95);}
-    to {opacity: 1; transform: scale(1);}
-  }
-
+  
   .lightbox-content img {
     width: 100%;
     max-height: 400px;
@@ -595,76 +549,8 @@
   border: 2px solid #0033cc;
 }
 /* 📱 Tablet */
-@media (max-width: 992px) {
-
-  .publications-section {
-    padding: 60px 30px;
-  }
-
-  .section-title {
-    font-size: 2.1rem;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
-    margin-bottom: 40px;
-  }
-
-  .publications-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 28px;
-  }
-
-  .pub-img {
-    height: 210px;
-  }
-
-}
-
 
 /* 📱 Mobile */
-@media (max-width: 600px) {
-
-  .publications-section {
-    padding: 50px 20px;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .section-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 35px;
-  }
-
-  .publications-grid {
-    grid-template-columns: 1fr;   /* single column */
-    gap: 25px;
-  }
-
-  .pub-img {
-    height: 200px;
-  }
-
-  .pub-content {
-    padding: 20px 18px 25px;
-  }
-
-  .pub-content h3 {
-    font-size: 1.15rem;
-  }
-
-  .pub-content p {
-    font-size: 0.95rem;
-  }
-
-  .pub-btn {
-    padding: 9px 20px;
-    font-size: 0.9rem;
-  }
-
-}
 
 /* Gradient Background */
 .tools-section {
@@ -779,21 +665,6 @@
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .tools-row {
-    flex-wrap: wrap;
-  }
-
-  .tool-card {
-    flex: 1 1 calc(50% - 20px);
-  }
-}
-
-@media (max-width: 576px) {
-  .tool-card {
-    flex: 1 1 100%;
-  }
-}
 
 /* FOOTER STYLE */
 .footer{
@@ -1059,96 +930,6 @@
 /* TABLET (below 992px) */
 /* ============================= */
 
-@media (max-width: 992px){
-
-    .about-story{
-        flex-direction: column;   /* stack image and text */
-        gap: 40px;
-    }
-
-    .story-image img{
-        height: 400px;
-    }
-
-    .section-heading{
-        font-size: 32px;
-        margin: 60px auto 30px;
-    }
-
-}
-
-
-/* ============================= */
-/* MOBILE (below 768px) */
-/* ============================= */
-
-@media (max-width: 768px){
-
-    .story-image img{
-        height: 320px;
-    }
-
-    .section-heading{
-        font-size: 28px;
-    }
-
-    .info-grid{
-        grid-template-columns: 1fr;  /* one card per row */
-    }
-
-    .team-grid{
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* ============================= */
-/* SMALL MOBILE (below 480px) */
-/* ============================= */
-
-@media (max-width: 480px){
-
-    .story-image img{
-        height: 250px;
-    }
-
-    .section-heading{
-        font-size: 24px;
-    }
-
-    .info-card,
-    .team-card{
-        padding: 20px;
-    }
-
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-center {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .footer-links {
-    margin-bottom: 15px;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-
-  .footer-brand {
-    justify-content: center;
-  }
-}
 .category-page {
   padding: 80px 10%;
   text-align: center;
@@ -1346,21 +1127,6 @@ transition:0.4s;
 animation: pulseIcon 2s infinite;
 }
 
-@keyframes pulseIcon{
-
-0%{
-transform: scale(1);
-}
-
-50%{
-transform: scale(1.15);
-}
-
-100%{
-transform: scale(1);
-}
-
-}
 
 
 
@@ -1390,14 +1156,3 @@ transform: rotate(360deg);
 animation: arrowBounce 1.5s infinite;
 }
 
-@keyframes arrowBounce{
-
-0%,100%{
-transform: translateY(0);
-}
-
-50%{
-transform: translateY(8px);
-}
-
-}
