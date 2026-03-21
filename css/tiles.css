@@ -55,7 +55,40 @@ transition:0.3s;
 color:#FBF9E4;
 }
 
+@media (max-width:768px){
 
+  .navbar{
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar .logo{
+    margin-bottom: 10px;
+  }
+
+  .nav-links{
+    display: flex;
+    overflow-x: auto;        /* ✅ scroll instead of breaking */
+    white-space: nowrap;
+    gap: 15px;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  .nav-links::-webkit-scrollbar{
+    display: none; /* hide scrollbar */
+  }
+
+  .nav-links a{
+    flex: 0 0 auto;         /* prevent shrinking */
+    margin: 0;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+  }
+
+}
 /* HERO */
 
 .tiles-hero{
