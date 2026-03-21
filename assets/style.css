@@ -1136,17 +1136,6 @@ animation: pulseIcon 2s infinite;
 animation: rotateIcon 6s linear infinite;
 }
 
-@keyframes rotateIcon{
-
-0%{
-transform: rotate(0deg);
-}
-
-100%{
-transform: rotate(360deg);
-}
-
-}
 
 
 
@@ -1155,4 +1144,202 @@ transform: rotate(360deg);
 .arrow-icon{
 animation: arrowBounce 1.5s infinite;
 }
+/* ============================= */
+/* 📱 TABLET (below 992px) */
+/* ============================= */
+@media (max-width: 992px) {
 
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-story {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .company-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .company-cards {
+    flex-direction: column;
+  }
+
+  .tools-row {
+    justify-content: center;
+  }
+
+  .tool-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-center {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+/* ============================= */
+/* 📱 MOBILE (below 768px) */
+/* ============================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR FIX */
+  .navbar {
+    padding: 0.8rem 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .navbar .logo img {
+    height: 45px;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 8px 0;
+  }
+
+  /* HERO */
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  /* SECTIONS */
+  .tile-showcase,
+  .product-section,
+  .tools-section,
+  .publications-section {
+    padding: 50px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .section-heading p {
+    font-size: 0.95rem;
+  }
+
+  /* GRID FIXES */
+  .tile-grid,
+  .product-grid,
+  .publications-grid,
+  .tiles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TOOL CARDS */
+  .tool-card {
+    flex: 1 1 100%;
+  }
+
+  /* VIDEO */
+  .showroom-video-section h1 {
+    font-size: 2rem;
+  }
+
+  .showroom-video-section h5 {
+    font-size: 0.9rem;
+  }
+
+  /* ABOUT */
+  .about-unique {
+    padding: 60px 20px;
+  }
+
+  .story-image img {
+    height: 250px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+
+/* ============================= */
+/* 📱 SMALL MOBILE (below 480px) */
+/* ============================= */
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.6rem;
+  }
+
+  .product-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .navbar {
+    padding: 0.6rem 1rem;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
