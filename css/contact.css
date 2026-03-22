@@ -463,3 +463,46 @@ background:#122C4F;
 color:white;
 cursor:pointer;
 }
+/* =========================
+   📱 MOBILE FIX - MAP SECTION
+========================= */
+@media (max-width:768px){
+
+  .map-section{
+    padding: 50px 20px;
+  }
+
+  /* MAIN FIX */
+  .map-wrapper{
+    flex-direction: column;   /* 🔥 STACK */
+    gap: 30px;
+  }
+
+  .map{
+    width: 100%;
+  }
+
+  .map iframe{
+    width: 100%;
+    height: 250px;   /* perfect mobile height */
+  }
+
+  .map-details{
+    width: 100%;
+    text-align: center;
+  }
+
+  .map-details h2{
+    font-size: 24px;
+  }
+
+  .desc{
+    font-size: 14px;
+  }
+
+  .detail-item{
+    justify-content: center;
+    font-size: 14px;
+  }
+
+}
