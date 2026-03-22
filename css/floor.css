@@ -312,3 +312,29 @@ opacity:0.7;
   font-size: 0.9rem;
   color: #cbd5ff;
 }
+/* =========================
+   📱 PERFECT GALLERY MOBILE
+========================= */
+@media (max-width:768px){
+
+  .gallery{
+    padding: 40px 20px;
+  }
+
+  .title{
+    font-size: 26px;
+    text-align: center;
+  }
+
+  /* 🔥 MAIN FIX */
+  .tiles-grid{
+    grid-template-columns: 1fr;   /* ✅ ONLY 1 CARD PER ROW */
+    gap: 20px;
+  }
+
+  .tile-card img{
+    height: 220px;   /* better proportion */
+    border-radius: 10px;
+  }
+
+}
