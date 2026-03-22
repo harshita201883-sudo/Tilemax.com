@@ -10,7 +10,6 @@ font-family:Arial, Helvetica, sans-serif;
 
 
 /* NAVBAR */
-
 .navbar {
       position: fixed;
       top: 0;
@@ -53,44 +52,6 @@ transition:0.3s;
 .nav-links a:hover{
 opacity:0.7;
 }
-@media (max-width:768px){
-
-  .navbar{
-    padding: 0.8rem 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo{
-    margin-bottom: 10px;
-  }
-
-  .nav-links{
-    display: flex;
-    overflow-x: auto;      /* ✅ enables scroll */
-    white-space: nowrap;
-    gap: 12px;
-    width: 100%;
-    padding-bottom: 5px;
-  }
-
-  /* HIDE SCROLLBAR */
-  .nav-links::-webkit-scrollbar{
-    display: none;
-  }
-
-  .nav-links a{
-    flex: 0 0 auto;       /* ❗ VERY IMPORTANT */
-    margin: 0;
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    background: rgba(255,255,255,0.08);
-    border-radius: 20px;
-  }
-
-}
-
-
 /* HERO */
 
 .about-hero{
@@ -441,4 +402,146 @@ font-size:28px;
   padding-top: 20px;
   font-size: 0.9rem;
   color: #cbd5ff;
+}
+
+/* =========================
+   📱 MOBILE PERFECT FIX
+========================= */
+@media (max-width:768px){
+
+/* =========================
+   NAVBAR (SCROLL STYLE)
+========================= */
+.navbar{
+  padding: 0.8rem 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo{
+  margin-bottom: 10px;
+}
+
+/* SCROLL NAV */
+.nav-links{
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 12px;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.nav-links::-webkit-scrollbar{
+  display: none;
+}
+
+.nav-links a{
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+.about-hero h1{
+  font-size: 30px;
+}
+
+
+/* =========================
+   STORY SECTION FIX
+========================= */
+.about-page{
+  padding: 50px 20px;
+}
+
+.about-story{
+  flex-direction: column;   /* 🔥 STACK */
+  gap: 20px;
+}
+
+.story-text{
+  text-align: center;
+}
+
+.story-text h2{
+  font-size: 24px;
+}
+
+.story-text p{
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* IMAGE FIX */
+.story-image img{
+  height: 250px;
+  width: 100%;
+}
+
+
+/* =========================
+   TEAM
+========================= */
+.team-section{
+  padding: 50px 20px;
+}
+
+.section-heading{
+  font-size: 26px;
+}
+
+.team-grid{
+  grid-template-columns: 1fr;
+}
+
+
+/* =========================
+   MISSION
+========================= */
+.mission-section{
+  padding: 50px 20px;
+}
+
+.info-grid{
+  grid-template-columns: 1fr;
+}
+
+
+/* =========================
+   WHY CHOOSE
+========================= */
+.why-choose{
+  padding: 50px 20px;
+}
+
+.features{
+  grid-template-columns: 1fr;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+.footer-container{
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.footer-center{
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-left,
+.footer-right{
+  max-width: 100%;
+}
+
 }
